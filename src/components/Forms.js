@@ -12,7 +12,9 @@ class Forms extends React.Component {
   } // fim constructor
 
   lidarOlhoSenha = () => {
-    console.log("Deu certo ");
+    this.state.olhoSenha === "password"
+      ? this.setState({ olhoSenha: "text" })
+      : this.setState({ olhoSenha: "password" });
   };
 
   render() {
