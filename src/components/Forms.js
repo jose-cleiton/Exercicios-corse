@@ -11,14 +11,16 @@ class Forms extends React.Component {
     };
   } // fim constructor
 
-  render() {
-    console.log(this.state);
+  lidarOlhoSenha = () => {
+    console.log("Deu certo ");
+  };
 
+  render() {
     return (
       <div className="password--input">
         <label>Password</label>
         <input type={this.state.olhoSenha} />
-        <FaEye className="eye" />
+        <FaEye onClick={this.lidarOlhoSenha} className="eye" />
       </div>
     );
   } //fim do render
