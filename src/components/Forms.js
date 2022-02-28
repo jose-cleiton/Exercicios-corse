@@ -22,7 +22,11 @@ class Forms extends React.Component {
       <div className="password--input">
         <label>Password</label>
         <input type={this.state.olhoSenha} />
-        <FaEye onClick={this.lidarOlhoSenha} className="eye" />
+        {this.state.olhoSenha === "password" ? (
+          <FaEyeSlash onClick={this.lidarOlhoSenha} className="eye" />
+        ) : (
+          <FaEye onClick={this.lidarOlhoSenha} className="eye" />
+        )}
       </div>
     );
   } //fim do render
